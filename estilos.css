@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+}
+
+#slideImg{
+    width: 100%;
+    height: 100%;
+    animation: zoom 3s linear infinite;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1.3);
+    }
+    15%{
+        transform: scale(1);
+    }
+    85%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    position: absolute;
+    top: 0;
+}
+.navbar{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: 35px auto;
+}
+
+.containerr {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 10, 5, 0.80), rgba(90, 40, 90, 0.80)), url(./bg-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbarr {
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbarr ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbarr ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.2rem;
+}
+
+.navbarr ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: yellowgreen;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+
+.navbarr ul li:hover::before {
+    width: 100%;
+}
+.content{
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+    color: #ffff;
+}
+.content h1{
+    font-size: 60px;
+}
+.content h3{
+    width: 80%;
+    margin: 20px auto 100px;
+    font-weight: 100%;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fe7250;
+    background: #fe7250;
+    color: #ffff;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+button:hover{
+    background: transparent;
+    border: 2px solid #ffff;
+}
